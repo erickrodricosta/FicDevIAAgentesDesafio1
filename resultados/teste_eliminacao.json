@@ -1,0 +1,328 @@
+[
+  {
+    "matricula": "206689",
+    "nome": "Beatriz Moraes Cunha",
+    "sessoes_apagadas_por_user_id": [
+      "DIA-2026-0111"
+    ],
+    "memorias_apagadas_por_user_id": [
+      "1b64a30d-3a51-4384-9af0-fb5870a6febd"
+    ],
+    "sessoes_residuais_detectadas_na_varredura": [],
+    "memorias_residuais_detectadas_na_varredura": [],
+    "limpeza_sql_residual": {},
+    "antes": {
+      "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+      "matricula": "206689",
+      "nome": "Beatriz Moraes Cunha",
+      "tabelas_existentes": [
+        "agno_memories",
+        "agno_runs",
+        "agno_schema_versions",
+        "agno_sessions"
+      ],
+      "ocorrencias_por_tabela": {
+        "agno_memories": 1,
+        "agno_runs": 2,
+        "agno_schema_versions": 0,
+        "agno_sessions": 1
+      },
+      "total_ocorrencias": 4,
+      "detalhes_ocorrencias": {
+        "agno_memories": [
+          {
+            "rowid": 1,
+            "session_id": null,
+            "user_id": "206689",
+            "memory_id": "1b64a30d-3a51-4384-9af0-fb5870a6febd",
+            "por_matricula": true,
+            "por_nome": true
+          }
+        ],
+        "agno_runs": [
+          {
+            "rowid": 1,
+            "session_id": "DIA-2026-0111",
+            "user_id": "206689",
+            "memory_id": null,
+            "por_matricula": true,
+            "por_nome": true
+          },
+          {
+            "rowid": 2,
+            "session_id": "DIA-2026-0111",
+            "user_id": "206689",
+            "memory_id": null,
+            "por_matricula": true,
+            "por_nome": true
+          }
+        ],
+        "agno_sessions": [
+          {
+            "rowid": 1,
+            "session_id": "DIA-2026-0111",
+            "user_id": "206689",
+            "memory_id": null,
+            "por_matricula": true,
+            "por_nome": false
+          }
+        ]
+      }
+    },
+    "apos_etapa1_sessoes": {
+      "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+      "matricula": "206689",
+      "nome": "Beatriz Moraes Cunha",
+      "tabelas_existentes": [
+        "agno_memories",
+        "agno_runs",
+        "agno_schema_versions",
+        "agno_sessions"
+      ],
+      "ocorrencias_por_tabela": {
+        "agno_memories": 1,
+        "agno_runs": 0,
+        "agno_schema_versions": 0,
+        "agno_sessions": 0
+      },
+      "total_ocorrencias": 1,
+      "detalhes_ocorrencias": {
+        "agno_memories": [
+          {
+            "rowid": 1,
+            "session_id": null,
+            "user_id": "206689",
+            "memory_id": "1b64a30d-3a51-4384-9af0-fb5870a6febd",
+            "por_matricula": true,
+            "por_nome": true
+          }
+        ]
+      }
+    },
+    "apos_etapa2_memorias_por_user_id": {
+      "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+      "matricula": "206689",
+      "nome": "Beatriz Moraes Cunha",
+      "tabelas_existentes": [
+        "agno_memories",
+        "agno_runs",
+        "agno_schema_versions",
+        "agno_sessions"
+      ],
+      "ocorrencias_por_tabela": {
+        "agno_memories": 0,
+        "agno_runs": 0,
+        "agno_schema_versions": 0,
+        "agno_sessions": 0
+      },
+      "total_ocorrencias": 0,
+      "detalhes_ocorrencias": {}
+    },
+    "apos_etapa3_varredura_completa": {
+      "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+      "matricula": "206689",
+      "nome": "Beatriz Moraes Cunha",
+      "tabelas_existentes": [
+        "agno_memories",
+        "agno_runs",
+        "agno_schema_versions",
+        "agno_sessions"
+      ],
+      "ocorrencias_por_tabela": {
+        "agno_memories": 0,
+        "agno_runs": 0,
+        "agno_schema_versions": 0,
+        "agno_sessions": 0
+      },
+      "total_ocorrencias": 0,
+      "detalhes_ocorrencias": {}
+    },
+    "eliminacao_total_confirmada": true,
+    "verificacao_pos_exclusao_em_nova_sessao": "Não há registro disponível nesta conversa sobre a matrícula, o nome ou a viagem vinculados ao pedido DIA-2026-0111.",
+    "estado_final_banco": {
+      "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+      "matricula": "206689",
+      "nome": "Beatriz Moraes Cunha",
+      "tabelas_existentes": [
+        "agno_memories",
+        "agno_runs",
+        "agno_schema_versions",
+        "agno_sessions"
+      ],
+      "ocorrencias_por_tabela": {
+        "agno_memories": 0,
+        "agno_runs": 0,
+        "agno_schema_versions": 0,
+        "agno_sessions": 0
+      },
+      "total_ocorrencias": 0,
+      "detalhes_ocorrencias": {}
+    }
+  },
+  {
+    "matricula": "207418",
+    "nome": "Carla Regina Souza",
+    "sessoes_apagadas_por_user_id": [],
+    "memorias_apagadas_por_user_id": [],
+    "sessoes_residuais_detectadas_na_varredura": [
+      "DIA-2026-0112"
+    ],
+    "memorias_residuais_detectadas_na_varredura": [],
+    "limpeza_sql_residual": {},
+    "antes": {
+      "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+      "matricula": "207418",
+      "nome": "Carla Regina Souza",
+      "tabelas_existentes": [
+        "agno_memories",
+        "agno_runs",
+        "agno_schema_versions",
+        "agno_sessions"
+      ],
+      "ocorrencias_por_tabela": {
+        "agno_memories": 0,
+        "agno_runs": 2,
+        "agno_schema_versions": 0,
+        "agno_sessions": 0
+      },
+      "total_ocorrencias": 2,
+      "detalhes_ocorrencias": {
+        "agno_runs": [
+          {
+            "rowid": 3,
+            "session_id": "DIA-2026-0112",
+            "user_id": "207481",
+            "memory_id": null,
+            "por_matricula": false,
+            "por_nome": true
+          },
+          {
+            "rowid": 4,
+            "session_id": "DIA-2026-0112",
+            "user_id": "207481",
+            "memory_id": null,
+            "por_matricula": true,
+            "por_nome": true
+          }
+        ]
+      }
+    },
+    "apos_etapa1_sessoes": {
+      "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+      "matricula": "207418",
+      "nome": "Carla Regina Souza",
+      "tabelas_existentes": [
+        "agno_memories",
+        "agno_runs",
+        "agno_schema_versions",
+        "agno_sessions"
+      ],
+      "ocorrencias_por_tabela": {
+        "agno_memories": 0,
+        "agno_runs": 2,
+        "agno_schema_versions": 0,
+        "agno_sessions": 0
+      },
+      "total_ocorrencias": 2,
+      "detalhes_ocorrencias": {
+        "agno_runs": [
+          {
+            "rowid": 3,
+            "session_id": "DIA-2026-0112",
+            "user_id": "207481",
+            "memory_id": null,
+            "por_matricula": false,
+            "por_nome": true
+          },
+          {
+            "rowid": 4,
+            "session_id": "DIA-2026-0112",
+            "user_id": "207481",
+            "memory_id": null,
+            "por_matricula": true,
+            "por_nome": true
+          }
+        ]
+      }
+    },
+    "apos_etapa2_memorias_por_user_id": {
+      "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+      "matricula": "207418",
+      "nome": "Carla Regina Souza",
+      "tabelas_existentes": [
+        "agno_memories",
+        "agno_runs",
+        "agno_schema_versions",
+        "agno_sessions"
+      ],
+      "ocorrencias_por_tabela": {
+        "agno_memories": 0,
+        "agno_runs": 2,
+        "agno_schema_versions": 0,
+        "agno_sessions": 0
+      },
+      "total_ocorrencias": 2,
+      "detalhes_ocorrencias": {
+        "agno_runs": [
+          {
+            "rowid": 3,
+            "session_id": "DIA-2026-0112",
+            "user_id": "207481",
+            "memory_id": null,
+            "por_matricula": false,
+            "por_nome": true
+          },
+          {
+            "rowid": 4,
+            "session_id": "DIA-2026-0112",
+            "user_id": "207481",
+            "memory_id": null,
+            "por_matricula": true,
+            "por_nome": true
+          }
+        ]
+      }
+    },
+    "apos_etapa3_varredura_completa": {
+      "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+      "matricula": "207418",
+      "nome": "Carla Regina Souza",
+      "tabelas_existentes": [
+        "agno_memories",
+        "agno_runs",
+        "agno_schema_versions",
+        "agno_sessions"
+      ],
+      "ocorrencias_por_tabela": {
+        "agno_memories": 0,
+        "agno_runs": 0,
+        "agno_schema_versions": 0,
+        "agno_sessions": 0
+      },
+      "total_ocorrencias": 0,
+      "detalhes_ocorrencias": {}
+    },
+    "eliminacao_total_confirmada": true,
+    "verificacao_pos_exclusao_em_nova_sessao": "Não há registro, no histórico disponível, da sua matrícula, nome ou viagem associados ao pedido DIA-2026-0112.",
+    "verificacao_pos_exclusao_sessao_0112": "Não há registro, nesta conversa, de informações sobre o pedido da servidora Carla Regina Souza.",
+    "estado_final_banco": {
+      "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+      "matricula": "207418",
+      "nome": "Carla Regina Souza",
+      "tabelas_existentes": [
+        "agno_memories",
+        "agno_runs",
+        "agno_schema_versions",
+        "agno_sessions"
+      ],
+      "ocorrencias_por_tabela": {
+        "agno_memories": 0,
+        "agno_runs": 0,
+        "agno_schema_versions": 0,
+        "agno_sessions": 0
+      },
+      "total_ocorrencias": 0,
+      "detalhes_ocorrencias": {}
+    }
+  }
+]

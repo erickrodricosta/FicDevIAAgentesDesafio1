@@ -1,0 +1,22 @@
+=== TESTE DA ROTINA DE ELIMINAÇÃO LGPD (TABELA POR TABELA) ===
+Aviso: a rotina alcança somente o banco de trabalho do agente, não o processo oficial de despesa.
+
+Titular: Beatriz Moraes Cunha (matrícula 206689)
+  Antes (por tabela): {'agno_memories': 1, 'agno_runs': 2, 'agno_schema_versions': 0, 'agno_sessions': 1} (total=4)
+  Após Etapa 1 (sessões por user_id): {'agno_memories': 1, 'agno_runs': 0, 'agno_schema_versions': 0, 'agno_sessions': 0} (total=1)
+  Após Etapa 2 (delete_user_memories por user_id): {'agno_memories': 0, 'agno_runs': 0, 'agno_schema_versions': 0, 'agno_sessions': 0} (total=0)
+  Sessões residuais achadas na varredura: []
+  Memórias residuais achadas na varredura: []
+  Após Etapa 3 (varredura completa): {'agno_memories': 0, 'agno_runs': 0, 'agno_schema_versions': 0, 'agno_sessions': 0} (total=0)
+  Eliminação total confirmada: True
+  Resposta do agente em nova sessão pós-exclusão: Não há registro disponível nesta conversa sobre a matrícula, o nome ou a viagem vinculados ao pedido DIA-2026-0111.
+
+Titular: Carla Regina Souza (matrícula 207418)
+  Antes (por tabela): {'agno_memories': 0, 'agno_runs': 2, 'agno_schema_versions': 0, 'agno_sessions': 0} (total=2)
+  Após Etapa 1 (sessões por user_id): {'agno_memories': 0, 'agno_runs': 2, 'agno_schema_versions': 0, 'agno_sessions': 0} (total=2)
+  Após Etapa 2 (delete_user_memories por user_id): {'agno_memories': 0, 'agno_runs': 2, 'agno_schema_versions': 0, 'agno_sessions': 0} (total=2)
+  Sessões residuais achadas na varredura: ['DIA-2026-0112']
+  Memórias residuais achadas na varredura: []
+  Após Etapa 3 (varredura completa): {'agno_memories': 0, 'agno_runs': 0, 'agno_schema_versions': 0, 'agno_sessions': 0} (total=0)
+  Eliminação total confirmada: True
+  Resposta do agente em nova sessão pós-exclusão: Não há registro, no histórico disponível, da sua matrícula, nome ou viagem associados ao pedido DIA-2026-0112.

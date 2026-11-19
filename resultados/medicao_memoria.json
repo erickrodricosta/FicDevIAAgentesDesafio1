@@ -1,0 +1,543 @@
+{
+  "escopo": "Medição de memória nos 2 pedidos com diligência/complementação (Etapa 4)",
+  "observacao_lgpd": "A rotina de eliminação alcança somente o banco de trabalho do agente (SQLite). O processo oficial de concessão de diárias permanece sujeito às normas de despesa pública, transparência e guarda documental.",
+  "configuracoes": [
+    {
+      "slug": "sem_memoria",
+      "configuracao": "1 · Sem memória",
+      "casos": [
+        {
+          "numero_pedido": "DIA-2026-0111",
+          "turno1": {
+            "status": "COMPLETED",
+            "recomendacao": "diligencia",
+            "chamadas_modelo": 2,
+            "tokens_entrada": 6420,
+            "tokens_saida": 499,
+            "custo_usd": 0.001883,
+            "tempo_s": 5.393
+          },
+          "turno2_complementacao": {
+            "status": "BARREIRA_RECUSOU",
+            "aprovado_barreira": false,
+            "motivos_recusa": [
+              "Matrícula '205882' na instrução não consta do pedido nem da complementação.",
+              "consultar_servidor recebeu matrícula '205882' fora do pedido/complementação.",
+              "consultar_historico_diarias recebeu matrícula '205882' fora do pedido/complementação.",
+              "calcular_diarias recebeu data_partida='2026-11-16' fora do pedido/complementação.",
+              "calcular_diarias recebeu data_partida diferente da do pedido.",
+              "Instrução de mérito emitida para matrícula '205882' cujo titular cadastrado diverge de 'Beatriz Moraes Cunha'."
+            ],
+            "recomendacao": null,
+            "matricula_final": null,
+            "quantidade_diarias": null,
+            "valor_total": null,
+            "chamadas_modelo": 5,
+            "tokens_entrada": 16759,
+            "tokens_saida": 735,
+            "custo_usd": 0.004234,
+            "tempo_s": 9.92,
+            "aplicada_ao_pedido_certo": false
+          },
+          "custo_total_2_turnos_usd": 0.006117,
+          "entrada_total_2_turnos": 23179
+        },
+        {
+          "numero_pedido": "DIA-2026-0112",
+          "turno1": {
+            "status": "COMPLETED",
+            "recomendacao": "diligencia",
+            "chamadas_modelo": 2,
+            "tokens_entrada": 6409,
+            "tokens_saida": 460,
+            "custo_usd": 0.001834,
+            "tempo_s": 4.993
+          },
+          "turno2_complementacao": {
+            "status": "BARREIRA_RECUSOU",
+            "aprovado_barreira": false,
+            "motivos_recusa": [
+              "calcular_diarias recebeu data_partida='2026-10-12' fora do pedido/complementação.",
+              "calcular_diarias recebeu data_retorno='2026-10-14' fora do pedido/complementação.",
+              "calcular_diarias recebeu data_partida diferente da do pedido."
+            ],
+            "recomendacao": null,
+            "matricula_final": null,
+            "quantidade_diarias": null,
+            "valor_total": null,
+            "chamadas_modelo": 5,
+            "tokens_entrada": 16625,
+            "tokens_saida": 875,
+            "custo_usd": 0.004375,
+            "tempo_s": 10.595,
+            "aplicada_ao_pedido_certo": false
+          },
+          "custo_total_2_turnos_usd": 0.006209,
+          "entrada_total_2_turnos": 23034
+        }
+      ],
+      "acertos_complementacao": 0,
+      "custo_total_usd": 0.012326
+    },
+    {
+      "slug": "historico_sessao",
+      "configuracao": "2 · Histórico da sessão (teto=6)",
+      "casos": [
+        {
+          "numero_pedido": "DIA-2026-0111",
+          "turno1": {
+            "status": "COMPLETED",
+            "recomendacao": "diligencia",
+            "chamadas_modelo": 2,
+            "tokens_entrada": 6420,
+            "tokens_saida": 483,
+            "custo_usd": 0.001864,
+            "tempo_s": 4.715
+          },
+          "turno2_complementacao": {
+            "status": "COMPLETED",
+            "aprovado_barreira": true,
+            "motivos_recusa": [],
+            "recomendacao": "apto_para_autorizacao",
+            "matricula_final": "206689",
+            "quantidade_diarias": 3.5,
+            "valor_total": 980.0,
+            "chamadas_modelo": 5,
+            "tokens_entrada": 20160,
+            "tokens_saida": 686,
+            "custo_usd": 0.004855,
+            "tempo_s": 8.648,
+            "aplicada_ao_pedido_certo": true
+          },
+          "custo_total_2_turnos_usd": 0.006719,
+          "entrada_total_2_turnos": 26580
+        },
+        {
+          "numero_pedido": "DIA-2026-0112",
+          "turno1": {
+            "status": "COMPLETED",
+            "recomendacao": "diligencia",
+            "chamadas_modelo": 2,
+            "tokens_entrada": 6409,
+            "tokens_saida": 507,
+            "custo_usd": 0.00189,
+            "tempo_s": 5.554
+          },
+          "turno2_complementacao": {
+            "status": "COMPLETED",
+            "aprovado_barreira": true,
+            "motivos_recusa": [],
+            "recomendacao": "apto_para_autorizacao",
+            "matricula_final": "207418",
+            "quantidade_diarias": 3.5,
+            "valor_total": 770.0,
+            "chamadas_modelo": 5,
+            "tokens_entrada": 20262,
+            "tokens_saida": 772,
+            "custo_usd": 0.004979,
+            "tempo_s": 8.898,
+            "aplicada_ao_pedido_certo": true
+          },
+          "custo_total_2_turnos_usd": 0.006869,
+          "entrada_total_2_turnos": 26671
+        }
+      ],
+      "acertos_complementacao": 2,
+      "custo_total_usd": 0.013588
+    },
+    {
+      "slug": "historico_mais_memorias",
+      "configuracao": "3 · Histórico + memórias do usuário",
+      "casos": [
+        {
+          "numero_pedido": "DIA-2026-0111",
+          "turno1": {
+            "status": "COMPLETED",
+            "recomendacao": "diligencia",
+            "chamadas_modelo": 2,
+            "tokens_entrada": 8853,
+            "tokens_saida": 740,
+            "custo_usd": 0.002659,
+            "tempo_s": 5.387
+          },
+          "turno2_complementacao": {
+            "status": "COMPLETED",
+            "aprovado_barreira": true,
+            "motivos_recusa": [],
+            "recomendacao": "apto_para_autorizacao",
+            "matricula_final": "206689",
+            "quantidade_diarias": 3.5,
+            "valor_total": 980.0,
+            "chamadas_modelo": 5,
+            "tokens_entrada": 23364,
+            "tokens_saida": 1131,
+            "custo_usd": 0.00603,
+            "tempo_s": 9.794,
+            "aplicada_ao_pedido_certo": true
+          },
+          "custo_total_2_turnos_usd": 0.008689,
+          "entrada_total_2_turnos": 32217
+        },
+        {
+          "numero_pedido": "DIA-2026-0112",
+          "turno1": {
+            "status": "COMPLETED",
+            "recomendacao": "diligencia",
+            "chamadas_modelo": 2,
+            "tokens_entrada": 7588,
+            "tokens_saida": 519,
+            "custo_usd": 0.00214,
+            "tempo_s": 5.002
+          },
+          "turno2_complementacao": {
+            "status": "COMPLETED",
+            "aprovado_barreira": true,
+            "motivos_recusa": [],
+            "recomendacao": "apto_para_autorizacao",
+            "matricula_final": "207418",
+            "quantidade_diarias": 3.5,
+            "valor_total": 770.0,
+            "chamadas_modelo": 5,
+            "tokens_entrada": 21450,
+            "tokens_saida": 754,
+            "custo_usd": 0.005195,
+            "tempo_s": 8.304,
+            "aplicada_ao_pedido_certo": true
+          },
+          "custo_total_2_turnos_usd": 0.007335,
+          "entrada_total_2_turnos": 29038
+        }
+      ],
+      "acertos_complementacao": 2,
+      "custo_total_usd": 0.016024
+    }
+  ],
+  "eliminacao_lgpd": [
+    {
+      "matricula": "206689",
+      "nome": "Beatriz Moraes Cunha",
+      "sessoes_apagadas_por_user_id": [
+        "DIA-2026-0111"
+      ],
+      "memorias_apagadas_por_user_id": [
+        "1b64a30d-3a51-4384-9af0-fb5870a6febd"
+      ],
+      "sessoes_residuais_detectadas_na_varredura": [],
+      "memorias_residuais_detectadas_na_varredura": [],
+      "limpeza_sql_residual": {},
+      "antes": {
+        "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+        "matricula": "206689",
+        "nome": "Beatriz Moraes Cunha",
+        "tabelas_existentes": [
+          "agno_memories",
+          "agno_runs",
+          "agno_schema_versions",
+          "agno_sessions"
+        ],
+        "ocorrencias_por_tabela": {
+          "agno_memories": 1,
+          "agno_runs": 2,
+          "agno_schema_versions": 0,
+          "agno_sessions": 1
+        },
+        "total_ocorrencias": 4,
+        "detalhes_ocorrencias": {
+          "agno_memories": [
+            {
+              "rowid": 1,
+              "session_id": null,
+              "user_id": "206689",
+              "memory_id": "1b64a30d-3a51-4384-9af0-fb5870a6febd",
+              "por_matricula": true,
+              "por_nome": true
+            }
+          ],
+          "agno_runs": [
+            {
+              "rowid": 1,
+              "session_id": "DIA-2026-0111",
+              "user_id": "206689",
+              "memory_id": null,
+              "por_matricula": true,
+              "por_nome": true
+            },
+            {
+              "rowid": 2,
+              "session_id": "DIA-2026-0111",
+              "user_id": "206689",
+              "memory_id": null,
+              "por_matricula": true,
+              "por_nome": true
+            }
+          ],
+          "agno_sessions": [
+            {
+              "rowid": 1,
+              "session_id": "DIA-2026-0111",
+              "user_id": "206689",
+              "memory_id": null,
+              "por_matricula": true,
+              "por_nome": false
+            }
+          ]
+        }
+      },
+      "apos_etapa1_sessoes": {
+        "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+        "matricula": "206689",
+        "nome": "Beatriz Moraes Cunha",
+        "tabelas_existentes": [
+          "agno_memories",
+          "agno_runs",
+          "agno_schema_versions",
+          "agno_sessions"
+        ],
+        "ocorrencias_por_tabela": {
+          "agno_memories": 1,
+          "agno_runs": 0,
+          "agno_schema_versions": 0,
+          "agno_sessions": 0
+        },
+        "total_ocorrencias": 1,
+        "detalhes_ocorrencias": {
+          "agno_memories": [
+            {
+              "rowid": 1,
+              "session_id": null,
+              "user_id": "206689",
+              "memory_id": "1b64a30d-3a51-4384-9af0-fb5870a6febd",
+              "por_matricula": true,
+              "por_nome": true
+            }
+          ]
+        }
+      },
+      "apos_etapa2_memorias_por_user_id": {
+        "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+        "matricula": "206689",
+        "nome": "Beatriz Moraes Cunha",
+        "tabelas_existentes": [
+          "agno_memories",
+          "agno_runs",
+          "agno_schema_versions",
+          "agno_sessions"
+        ],
+        "ocorrencias_por_tabela": {
+          "agno_memories": 0,
+          "agno_runs": 0,
+          "agno_schema_versions": 0,
+          "agno_sessions": 0
+        },
+        "total_ocorrencias": 0,
+        "detalhes_ocorrencias": {}
+      },
+      "apos_etapa3_varredura_completa": {
+        "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+        "matricula": "206689",
+        "nome": "Beatriz Moraes Cunha",
+        "tabelas_existentes": [
+          "agno_memories",
+          "agno_runs",
+          "agno_schema_versions",
+          "agno_sessions"
+        ],
+        "ocorrencias_por_tabela": {
+          "agno_memories": 0,
+          "agno_runs": 0,
+          "agno_schema_versions": 0,
+          "agno_sessions": 0
+        },
+        "total_ocorrencias": 0,
+        "detalhes_ocorrencias": {}
+      },
+      "eliminacao_total_confirmada": true,
+      "verificacao_pos_exclusao_em_nova_sessao": "Não há registro disponível nesta conversa sobre a matrícula, o nome ou a viagem vinculados ao pedido DIA-2026-0111.",
+      "estado_final_banco": {
+        "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+        "matricula": "206689",
+        "nome": "Beatriz Moraes Cunha",
+        "tabelas_existentes": [
+          "agno_memories",
+          "agno_runs",
+          "agno_schema_versions",
+          "agno_sessions"
+        ],
+        "ocorrencias_por_tabela": {
+          "agno_memories": 0,
+          "agno_runs": 0,
+          "agno_schema_versions": 0,
+          "agno_sessions": 0
+        },
+        "total_ocorrencias": 0,
+        "detalhes_ocorrencias": {}
+      }
+    },
+    {
+      "matricula": "207418",
+      "nome": "Carla Regina Souza",
+      "sessoes_apagadas_por_user_id": [],
+      "memorias_apagadas_por_user_id": [],
+      "sessoes_residuais_detectadas_na_varredura": [
+        "DIA-2026-0112"
+      ],
+      "memorias_residuais_detectadas_na_varredura": [],
+      "limpeza_sql_residual": {},
+      "antes": {
+        "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+        "matricula": "207418",
+        "nome": "Carla Regina Souza",
+        "tabelas_existentes": [
+          "agno_memories",
+          "agno_runs",
+          "agno_schema_versions",
+          "agno_sessions"
+        ],
+        "ocorrencias_por_tabela": {
+          "agno_memories": 0,
+          "agno_runs": 2,
+          "agno_schema_versions": 0,
+          "agno_sessions": 0
+        },
+        "total_ocorrencias": 2,
+        "detalhes_ocorrencias": {
+          "agno_runs": [
+            {
+              "rowid": 3,
+              "session_id": "DIA-2026-0112",
+              "user_id": "207481",
+              "memory_id": null,
+              "por_matricula": false,
+              "por_nome": true
+            },
+            {
+              "rowid": 4,
+              "session_id": "DIA-2026-0112",
+              "user_id": "207481",
+              "memory_id": null,
+              "por_matricula": true,
+              "por_nome": true
+            }
+          ]
+        }
+      },
+      "apos_etapa1_sessoes": {
+        "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+        "matricula": "207418",
+        "nome": "Carla Regina Souza",
+        "tabelas_existentes": [
+          "agno_memories",
+          "agno_runs",
+          "agno_schema_versions",
+          "agno_sessions"
+        ],
+        "ocorrencias_por_tabela": {
+          "agno_memories": 0,
+          "agno_runs": 2,
+          "agno_schema_versions": 0,
+          "agno_sessions": 0
+        },
+        "total_ocorrencias": 2,
+        "detalhes_ocorrencias": {
+          "agno_runs": [
+            {
+              "rowid": 3,
+              "session_id": "DIA-2026-0112",
+              "user_id": "207481",
+              "memory_id": null,
+              "por_matricula": false,
+              "por_nome": true
+            },
+            {
+              "rowid": 4,
+              "session_id": "DIA-2026-0112",
+              "user_id": "207481",
+              "memory_id": null,
+              "por_matricula": true,
+              "por_nome": true
+            }
+          ]
+        }
+      },
+      "apos_etapa2_memorias_por_user_id": {
+        "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+        "matricula": "207418",
+        "nome": "Carla Regina Souza",
+        "tabelas_existentes": [
+          "agno_memories",
+          "agno_runs",
+          "agno_schema_versions",
+          "agno_sessions"
+        ],
+        "ocorrencias_por_tabela": {
+          "agno_memories": 0,
+          "agno_runs": 2,
+          "agno_schema_versions": 0,
+          "agno_sessions": 0
+        },
+        "total_ocorrencias": 2,
+        "detalhes_ocorrencias": {
+          "agno_runs": [
+            {
+              "rowid": 3,
+              "session_id": "DIA-2026-0112",
+              "user_id": "207481",
+              "memory_id": null,
+              "por_matricula": false,
+              "por_nome": true
+            },
+            {
+              "rowid": 4,
+              "session_id": "DIA-2026-0112",
+              "user_id": "207481",
+              "memory_id": null,
+              "por_matricula": true,
+              "por_nome": true
+            }
+          ]
+        }
+      },
+      "apos_etapa3_varredura_completa": {
+        "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+        "matricula": "207418",
+        "nome": "Carla Regina Souza",
+        "tabelas_existentes": [
+          "agno_memories",
+          "agno_runs",
+          "agno_schema_versions",
+          "agno_sessions"
+        ],
+        "ocorrencias_por_tabela": {
+          "agno_memories": 0,
+          "agno_runs": 0,
+          "agno_schema_versions": 0,
+          "agno_sessions": 0
+        },
+        "total_ocorrencias": 0,
+        "detalhes_ocorrencias": {}
+      },
+      "eliminacao_total_confirmada": true,
+      "verificacao_pos_exclusao_em_nova_sessao": "Não há registro, no histórico disponível, da sua matrícula, nome ou viagem associados ao pedido DIA-2026-0112.",
+      "verificacao_pos_exclusao_sessao_0112": "Não há registro, nesta conversa, de informações sobre o pedido da servidora Carla Regina Souza.",
+      "estado_final_banco": {
+        "db_file": "C:\\Users\\erick\\PycharmProjects\\FicDevIAAgentesDesafio1\\tmp\\exp_memoria\\historico_mais_memorias.db",
+        "matricula": "207418",
+        "nome": "Carla Regina Souza",
+        "tabelas_existentes": [
+          "agno_memories",
+          "agno_runs",
+          "agno_schema_versions",
+          "agno_sessions"
+        ],
+        "ocorrencias_por_tabela": {
+          "agno_memories": 0,
+          "agno_runs": 0,
+          "agno_schema_versions": 0,
+          "agno_sessions": 0
+        },
+        "total_ocorrencias": 0,
+        "detalhes_ocorrencias": {}
+      }
+    }
+  ]
+}

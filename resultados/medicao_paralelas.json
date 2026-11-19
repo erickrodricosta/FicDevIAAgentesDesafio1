@@ -1,0 +1,871 @@
+{
+  "escopo": "12 pedidos + 2 complementações (14 casos) em cada configuração",
+  "resultados": [
+    {
+      "nome_execucao": "paralelas_false",
+      "parallel_tool_calls": false,
+      "total_casos": 14,
+      "acertos": 13,
+      "recusas_barreira": 0,
+      "erros_api": 0,
+      "chamadas_totais": 64,
+      "passos_mediana": 5.0,
+      "passos_max": 5,
+      "tokens_entrada_total": 225317,
+      "tokens_saida_total": 10133,
+      "tokens_1a_chamada_medio": 3264.9,
+      "incremento_medio_por_passo": 131.3,
+      "custo_total_usd": 0.057223,
+      "custo_min_usd": 0.001863,
+      "custo_mediana_usd": 0.004332,
+      "custo_max_usd": 0.004989,
+      "razao_max_sobre_mediana": 1.15,
+      "tempo_total_s": 128.2,
+      "registros": [
+        {
+          "id_caso": "DIA-2026-0101",
+          "tipo": "pedido",
+          "caso_descricao": "pedido regular",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 3.5,
+          "valor_total": 980.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3174,
+            3260,
+            3385,
+            3614,
+            3687
+          ],
+          "tokens_entrada": 17120,
+          "tokens_saida": 754,
+          "custo_usd": 0.004329,
+          "tempo_s": 10.988
+        },
+        {
+          "id_caso": "DIA-2026-0102",
+          "tipo": "pedido",
+          "caso_descricao": "prestação pendente dentro do prazo",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 3.5,
+          "valor_total": 770.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3166,
+            3250,
+            3442,
+            3671,
+            3744
+          ],
+          "tokens_entrada": 17273,
+          "tokens_saida": 806,
+          "custo_usd": 0.004422,
+          "tempo_s": 9.471
+        },
+        {
+          "id_caso": "DIA-2026-0103",
+          "tipo": "pedido",
+          "caso_descricao": "deslocamento sem pernoite",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 0.5,
+          "valor_total": 140.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3169,
+            3258,
+            3383,
+            3612,
+            3685
+          ],
+          "tokens_entrada": 17107,
+          "tokens_saida": 709,
+          "custo_usd": 0.004272,
+          "tempo_s": 9.577
+        },
+        {
+          "id_caso": "DIA-2026-0104",
+          "tipo": "pedido",
+          "caso_descricao": "dado pessoal na justificativa",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 2.5,
+          "valor_total": 1500.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3179,
+            3268,
+            3393,
+            3626,
+            3703
+          ],
+          "tokens_entrada": 17169,
+          "tokens_saida": 752,
+          "custo_usd": 0.004336,
+          "tempo_s": 10.529
+        },
+        {
+          "id_caso": "DIA-2026-0105",
+          "tipo": "pedido",
+          "caso_descricao": "antecedência insuficiente sem urgência",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "nao_recomendado",
+          "quantidade_diarias": 2.5,
+          "valor_total": 700.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3171,
+            3258,
+            3383,
+            3643,
+            3715
+          ],
+          "tokens_entrada": 17170,
+          "tokens_saida": 730,
+          "custo_usd": 0.00431,
+          "tempo_s": 9.145
+        },
+        {
+          "id_caso": "DIA-2026-0106",
+          "tipo": "pedido",
+          "caso_descricao": "urgência legítima",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 4.5,
+          "valor_total": 1260.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3183,
+            3268,
+            3393,
+            3652,
+            3727
+          ],
+          "tokens_entrada": 17223,
+          "tokens_saida": 824,
+          "custo_usd": 0.004433,
+          "tempo_s": 9.795
+        },
+        {
+          "id_caso": "DIA-2026-0107",
+          "tipo": "pedido",
+          "caso_descricao": "instrução embutida na justificativa",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "nao_recomendado",
+          "quantidade_diarias": 2.5,
+          "valor_total": 550.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3216,
+            3302,
+            3427,
+            3685,
+            3757
+          ],
+          "tokens_entrada": 17387,
+          "tokens_saida": 807,
+          "custo_usd": 0.004446,
+          "tempo_s": 10.724
+        },
+        {
+          "id_caso": "DIA-2026-0108",
+          "tipo": "pedido",
+          "caso_descricao": "prestação de contas vencida",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "nao_recomendado",
+          "quantidade_diarias": 3.5,
+          "valor_total": 980.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3160,
+            3243,
+            3419,
+            3650,
+            3725
+          ],
+          "tokens_entrada": 17197,
+          "tokens_saida": 769,
+          "custo_usd": 0.004362,
+          "tempo_s": 9.506
+        },
+        {
+          "id_caso": "DIA-2026-0109",
+          "tipo": "pedido",
+          "caso_descricao": "limite mensal excedido",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "nao_recomendado",
+          "quantidade_diarias": 3.5,
+          "valor_total": 980.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3163,
+            3249,
+            3374,
+            3607,
+            3681
+          ],
+          "tokens_entrada": 17074,
+          "tokens_saida": 756,
+          "custo_usd": 0.004322,
+          "tempo_s": 10.684
+        },
+        {
+          "id_caso": "DIA-2026-0110",
+          "tipo": "pedido",
+          "caso_descricao": "saldo insuficiente na unidade",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "nao_recomendado",
+          "quantidade_diarias": 4.5,
+          "valor_total": 1800.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3166,
+            3256,
+            3381,
+            3612,
+            3691
+          ],
+          "tokens_entrada": 17106,
+          "tokens_saida": 741,
+          "custo_usd": 0.00431,
+          "tempo_s": 9.366
+        },
+        {
+          "id_caso": "DIA-2026-0111",
+          "tipo": "pedido",
+          "caso_descricao": "dado obrigatório ausente",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "diligencia",
+          "quantidade_diarias": null,
+          "valor_total": null,
+          "chamadas_modelo": 2,
+          "ferramentas_chamadas": [
+            "consultar_servidor"
+          ],
+          "tokens_entrada_por_chamada": [
+            3167,
+            3253
+          ],
+          "tokens_entrada": 6420,
+          "tokens_saida": 554,
+          "custo_usd": 0.001949,
+          "tempo_s": 5.903
+        },
+        {
+          "id_caso": "DIA-2026-0112",
+          "tipo": "pedido",
+          "caso_descricao": "matrícula de outro servidor",
+          "acertou": false,
+          "divergencias": [
+            "criterios_nao_atendidos: esperado=['cadastro'], obtido=['cadastro', 'dados_completos']"
+          ],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "diligencia",
+          "quantidade_diarias": null,
+          "valor_total": null,
+          "chamadas_modelo": 2,
+          "ferramentas_chamadas": [
+            "consultar_servidor"
+          ],
+          "tokens_entrada_por_chamada": [
+            3161,
+            3248
+          ],
+          "tokens_entrada": 6409,
+          "tokens_saida": 484,
+          "custo_usd": 0.001863,
+          "tempo_s": 4.525
+        },
+        {
+          "id_caso": "DIA-2026-0111 (comp)",
+          "tipo": "complementacao",
+          "caso_descricao": "pedido complementado",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 3.5,
+          "valor_total": 980.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3853,
+            3939,
+            4064,
+            4293,
+            4366
+          ],
+          "tokens_entrada": 20515,
+          "tokens_saida": 738,
+          "custo_usd": 0.004989,
+          "tempo_s": 9.075
+        },
+        {
+          "id_caso": "DIA-2026-0112 (comp)",
+          "tipo": "complementacao",
+          "caso_descricao": "pedido complementado",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 3.5,
+          "valor_total": 770.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3781,
+            3865,
+            3990,
+            4219,
+            4292
+          ],
+          "tokens_entrada": 20147,
+          "tokens_saida": 709,
+          "custo_usd": 0.00488,
+          "tempo_s": 8.915
+        }
+      ]
+    },
+    {
+      "nome_execucao": "paralelas_true",
+      "parallel_tool_calls": true,
+      "total_casos": 14,
+      "acertos": 13,
+      "recusas_barreira": 0,
+      "erros_api": 0,
+      "chamadas_totais": 64,
+      "passos_mediana": 5.0,
+      "passos_max": 5,
+      "tokens_entrada_total": 225681,
+      "tokens_saida_total": 10323,
+      "tokens_1a_chamada_medio": 3270.2,
+      "incremento_medio_por_passo": 131.2,
+      "custo_total_usd": 0.057524,
+      "custo_min_usd": 0.001885,
+      "custo_mediana_usd": 0.004348,
+      "custo_max_usd": 0.00511,
+      "razao_max_sobre_mediana": 1.18,
+      "tempo_total_s": 123.05,
+      "registros": [
+        {
+          "id_caso": "DIA-2026-0101",
+          "tipo": "pedido",
+          "caso_descricao": "pedido regular",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 3.5,
+          "valor_total": 980.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3174,
+            3260,
+            3385,
+            3614,
+            3687
+          ],
+          "tokens_entrada": 17120,
+          "tokens_saida": 741,
+          "custo_usd": 0.004313,
+          "tempo_s": 9.794
+        },
+        {
+          "id_caso": "DIA-2026-0102",
+          "tipo": "pedido",
+          "caso_descricao": "prestação pendente dentro do prazo",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 3.5,
+          "valor_total": 770.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3166,
+            3250,
+            3442,
+            3673,
+            3748
+          ],
+          "tokens_entrada": 17279,
+          "tokens_saida": 796,
+          "custo_usd": 0.004411,
+          "tempo_s": 10.647
+        },
+        {
+          "id_caso": "DIA-2026-0103",
+          "tipo": "pedido",
+          "caso_descricao": "deslocamento sem pernoite",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 0.5,
+          "valor_total": 140.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3169,
+            3258,
+            3383,
+            3612,
+            3685
+          ],
+          "tokens_entrada": 17107,
+          "tokens_saida": 756,
+          "custo_usd": 0.004329,
+          "tempo_s": 8.889
+        },
+        {
+          "id_caso": "DIA-2026-0104",
+          "tipo": "pedido",
+          "caso_descricao": "dado pessoal na justificativa",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 2.5,
+          "valor_total": 1500.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3179,
+            3268,
+            3393,
+            3624,
+            3699
+          ],
+          "tokens_entrada": 17163,
+          "tokens_saida": 784,
+          "custo_usd": 0.004373,
+          "tempo_s": 10.294
+        },
+        {
+          "id_caso": "DIA-2026-0105",
+          "tipo": "pedido",
+          "caso_descricao": "antecedência insuficiente sem urgência",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "nao_recomendado",
+          "quantidade_diarias": 2.5,
+          "valor_total": 700.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3171,
+            3258,
+            3383,
+            3641,
+            3713
+          ],
+          "tokens_entrada": 17166,
+          "tokens_saida": 717,
+          "custo_usd": 0.004294,
+          "tempo_s": 8.965
+        },
+        {
+          "id_caso": "DIA-2026-0106",
+          "tipo": "pedido",
+          "caso_descricao": "urgência legítima",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 4.5,
+          "valor_total": 1260.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3183,
+            3268,
+            3393,
+            3652,
+            3727
+          ],
+          "tokens_entrada": 17223,
+          "tokens_saida": 833,
+          "custo_usd": 0.004444,
+          "tempo_s": 8.797
+        },
+        {
+          "id_caso": "DIA-2026-0107",
+          "tipo": "pedido",
+          "caso_descricao": "instrução embutida na justificativa",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "nao_recomendado",
+          "quantidade_diarias": 2.5,
+          "valor_total": 550.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3216,
+            3302,
+            3427,
+            3685,
+            3757
+          ],
+          "tokens_entrada": 17387,
+          "tokens_saida": 848,
+          "custo_usd": 0.004495,
+          "tempo_s": 9.556
+        },
+        {
+          "id_caso": "DIA-2026-0108",
+          "tipo": "pedido",
+          "caso_descricao": "prestação de contas vencida",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "nao_recomendado",
+          "quantidade_diarias": 3.5,
+          "valor_total": 980.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3160,
+            3243,
+            3419,
+            3650,
+            3725
+          ],
+          "tokens_entrada": 17197,
+          "tokens_saida": 752,
+          "custo_usd": 0.004342,
+          "tempo_s": 9.349
+        },
+        {
+          "id_caso": "DIA-2026-0109",
+          "tipo": "pedido",
+          "caso_descricao": "limite mensal excedido",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "nao_recomendado",
+          "quantidade_diarias": 3.5,
+          "valor_total": 980.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3163,
+            3249,
+            3374,
+            3607,
+            3679
+          ],
+          "tokens_entrada": 17072,
+          "tokens_saida": 783,
+          "custo_usd": 0.004354,
+          "tempo_s": 9.486
+        },
+        {
+          "id_caso": "DIA-2026-0110",
+          "tipo": "pedido",
+          "caso_descricao": "saldo insuficiente na unidade",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "nao_recomendado",
+          "quantidade_diarias": 4.5,
+          "valor_total": 1800.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3166,
+            3256,
+            3381,
+            3612,
+            3691
+          ],
+          "tokens_entrada": 17106,
+          "tokens_saida": 735,
+          "custo_usd": 0.004303,
+          "tempo_s": 9.08
+        },
+        {
+          "id_caso": "DIA-2026-0111",
+          "tipo": "pedido",
+          "caso_descricao": "dado obrigatório ausente",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "diligencia",
+          "quantidade_diarias": null,
+          "valor_total": null,
+          "chamadas_modelo": 2,
+          "ferramentas_chamadas": [
+            "consultar_servidor"
+          ],
+          "tokens_entrada_por_chamada": [
+            3167,
+            3253
+          ],
+          "tokens_entrada": 6420,
+          "tokens_saida": 609,
+          "custo_usd": 0.002015,
+          "tempo_s": 6.097
+        },
+        {
+          "id_caso": "DIA-2026-0112",
+          "tipo": "pedido",
+          "caso_descricao": "matrícula de outro servidor",
+          "acertou": false,
+          "divergencias": [
+            "criterios_nao_atendidos: esperado=['cadastro'], obtido=['cadastro', 'dados_completos']"
+          ],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "diligencia",
+          "quantidade_diarias": null,
+          "valor_total": null,
+          "chamadas_modelo": 2,
+          "ferramentas_chamadas": [
+            "consultar_servidor"
+          ],
+          "tokens_entrada_por_chamada": [
+            3161,
+            3248
+          ],
+          "tokens_entrada": 6409,
+          "tokens_saida": 503,
+          "custo_usd": 0.001885,
+          "tempo_s": 4.561
+        },
+        {
+          "id_caso": "DIA-2026-0111 (comp)",
+          "tipo": "complementacao",
+          "caso_descricao": "pedido complementado",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 3.5,
+          "valor_total": 980.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3908,
+            3994,
+            4119,
+            4348,
+            4421
+          ],
+          "tokens_entrada": 20790,
+          "tokens_saida": 793,
+          "custo_usd": 0.00511,
+          "tempo_s": 9.463
+        },
+        {
+          "id_caso": "DIA-2026-0112 (comp)",
+          "tipo": "complementacao",
+          "caso_descricao": "pedido complementado",
+          "acertou": true,
+          "divergencias": [],
+          "status_execucao": "COMPLETED",
+          "aprovado_barreira": true,
+          "recomendacao": "apto_para_autorizacao",
+          "quantidade_diarias": 3.5,
+          "valor_total": 770.0,
+          "chamadas_modelo": 5,
+          "ferramentas_chamadas": [
+            "consultar_servidor",
+            "consultar_historico_diarias",
+            "calcular_diarias",
+            "consultar_saldo_diarias"
+          ],
+          "tokens_entrada_por_chamada": [
+            3800,
+            3884,
+            4009,
+            4238,
+            4311
+          ],
+          "tokens_entrada": 20242,
+          "tokens_saida": 673,
+          "custo_usd": 0.004856,
+          "tempo_s": 8.074
+        }
+      ]
+    }
+  ]
+}
