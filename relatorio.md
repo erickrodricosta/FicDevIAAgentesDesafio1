@@ -145,3 +145,10 @@ Testada no banco da Config 3 (`agno_memories`, `agno_runs`, `agno_sessions`, `ag
    - Embora as contas numéricas estejam 100% protegidas pelo código (0 erros de cálculo), o modelo ainda exige supervisão em classificações finas de critérios (como visto no `DIA-2026-0112`: **39/42** por incluir `dados_completos` junto com `cadastro`) e em juízos fáticos da justificativa (avaliar se há documentação anexa de **autorização expressa e escrita do Secretário Adjunto** no `DIA-2026-0106`, revisar **alertas de prompt injection** como no `DIA-2026-0107` e dados ocultados no `DIA-2026-0104`).
 3. **Detecção tardia na auditoria (Etapa 1):** erros de diárias costumam ser descobertos apenas meses depois em auditoria, tornando inviável qualquer fluxo autônomo sem revisão humana antes do ato.
 4. **Rastreabilidade de discordâncias:** o formulário obriga o servidor a revisar ou editar a minuta, registrar sua decisão ao lado da sugestão do agente e justificar divergências em [resultados/conferencias_humanas.jsonl](resultados/conferencias_humanas.jsonl), permitindo medir continuamente a taxa de discordância em produção — além de tratar automaticamente qualquer recusa da barreira ou erro de API com devolução visível à análise manual.
+
+### Validação prática no formulário de conferência (Etapa 5)
+
+Todas as **14 instruções do acervo** foram revisadas e registradas no formulário Streamlit em [resultados/conferencias_humanas.jsonl](resultados/conferencias_humanas.jsonl) — os **12 pedidos iniciais** (`DIA-2026-0101` a `DIA-2026-0112`) e as **2 complementações de diligência** (`DIA-2026-0111` e `DIA-2026-0112`):
+- **Concordância conferente × agente:** **14/14** (**0 divergências**, taxa de divergência medida de **0%**).
+- **Aderência às recomendações do gabarito normativo (`scripts/gabarito.json`):** **14/14 (100%)**, incluindo o fluxo completo de diligência → complementação na mesma sessão nos pedidos `DIA-2026-0111` e `DIA-2026-0112`.
+- **Proteção de dados nas minutas registradas:** **0 ocorrências** de CPF, conta ou agência bancária nas minutas gravadas (`DIA-2026-0104` preservou o mascaramento).
