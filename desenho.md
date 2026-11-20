@@ -19,6 +19,21 @@ Hoje, cada pedido de diária protocolado é instruído manualmente por um servid
 7. **Redação da instrução e minuta de despacho:** consolida as verificações, define a recomendação (`apto_para_autorizacao`, `nao_recomendado` ou `diligencia`), redige a minuta de despacho e encaminha ao ordenador de despesa para decidir (Art. 10).
 8. **Tratamento de retorno de diligência:** quando o solicitante envia uma complementação semanas ou horas depois, o servidor precisa localizar o pedido original e reconstituir todo o caso manualmente do zero.
 
+```mermaid
+flowchart TD
+    M1["1. Recebimento e leitura do pedido protocolado"] --> M2["2. Conferência manual de completude e cadastro (servidores.csv)"]
+    M2 --> M3{"Cadastro confere e dados completos?"}
+    M3 -- "Não (Art. 9º)" --> M4["Devolução em diligência sem análise de mérito"]
+    M4 --> M5["8. Retorno da complementação: servidor reconstitui o caso do zero"]
+    M5 --> M2
+    M3 -- "Sim" --> M6["3. Consulta a historico_diarias.csv (5 dias úteis e acumulado mensal)"]
+    M6 --> M7["4. Análise manual de antecedência e urgência (Art. 5º)"]
+    M7 --> M8["5. Cálculo manual de pernoites, diárias e Anexo I (tabela_diarias.json)"]
+    M8 --> M9["6. Conferência de limite mensal e saldo (unidades.json)"]
+    M9 --> M10["7. Redação da instrução e minuta de despacho"]
+    M10 --> M11["Ordenador de despesa defere ou indefere (Art. 10)"]
+```
+
 ---
 
 ## 2. Processo Proposto (Execução com o Agente Agno + Barreiras + Conferência)
@@ -34,6 +49,25 @@ Com o sistema construído neste desafio, o fluxo passa a operar em etapas contro
 7. **Emissão estruturada (`output_schema=Instrucao`):** o agente devolve o objeto Pydantic validado com as 6 verificações, alertas (incluindo tentativas de instrução embutida na justificativa e dados mascarados), pendências, recomendação e minuta de despacho.
 8. **Barreira de código e verificação de status:** antes de qualquer exibição ao servidor, a aplicação confere `resposta.status != RunStatus.error` e executa a barreira de verificação em Python: garante que todas as matrículas e datas usadas nas ferramentas constam do pedido ou da complementação, que a cadeia de parâmetros/valores coincide com os retornos das ferramentas e que nenhuma instrução com dado inventado chegue ao conferente. Em caso de falha ou recusa, exibe mensagem padrão devolvendo à análise manual.
 9. **Conferência humana no formulário e retorno de diligência:** o servidor analisa as verificações, edita a minuta de despacho em campo editável, registra sua decisão (e justificativa se divergir do agente) e encaminha ao ordenador de despesa (Art. 10). Se o pedido estava em diligência, a complementação é enviada na mesma sessão (`session_id = numero_pedido`), recuperando o pedido original pela memória SQLite (`add_history_to_context=True`). O titular pode ainda acionar a eliminação verificável dos dados no banco de trabalho do agente.
+
+```mermaid
+flowchart TD
+    P1["1. Entrada do pedido + PIIDetectionGuardrail (mascara CPF, conta e agência)"] --> P2["2. consultar_servidor (sem CPF nem e-mail)"]
+    P2 --> P3{"3. Cadastro confere e data_retorno informada?"}
+    P3 -- "Não (Art. 9º)" --> P7D["7. Emissão estruturada: Instrucao (diligencia, valores nulos)"]
+    P3 -- "Sim" --> P4["4. consultar_historico_diarias (prazo de 5 dias úteis e soma mensal)"]
+    P4 --> P5["5. calcular_diarias (antecedência, quantidade, valor e limite em código)"]
+    P5 --> P6["6. consultar_saldo_diarias (comparação com saldo da unidade)"]
+    P6 --> P7M["7. Emissão estruturada: Instrucao (apto_para_autorizacao ou nao_recomendado)"]
+    P7D --> P8{"8. Barreira em código: RunStatus ok e validar_execucao aprovou?"}
+    P7M --> P8
+    P8 -- "Não (erro API ou dado inventado)" --> P8E["Exibe mensagem padrão e devolve à análise manual"]
+    P8 -- "Sim" --> P9["9. Conferência humana no Streamlit (minuta editável e registro de decisão)"]
+    P9 --> P9D{"Pedido em diligência?"}
+    P9D -- "Sim: envia complementação" --> PMEM["Mesma sessão no SqliteDb (session_id = numero_pedido)"]
+    PMEM --> P1
+    P9D -- "Não: segue fluxo" --> P10["Ordenador de despesa defere ou indefere (Art. 10)"]
+```
 
 ---
 
